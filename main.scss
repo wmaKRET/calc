@@ -1,0 +1,185 @@
+// COLORS
+$background: rgb(77, 81, 124);
+$content: rgb(49, 53, 88);
+$text: rgb(255, 255, 255);
+$hover: rgb(187, 192, 231);
+$hoverborder: rgb(149, 153, 184);
+$buttonstd: rgb(189, 189, 194);
+$buttonstdborder: rgb(144, 144, 148);
+$buttonopt: rgb(98, 103, 165);
+$buttonoptborder: rgb(74, 78, 126);
+$buttonres: rgb(255, 104, 104);
+$buttonresborder: rgb(192, 79, 79);
+// FONTS
+$font-md: 1.25rem;
+$font-lg: 1.5rem;
+$font-vlg: 2rem;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    background-color: $background;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $text;
+}
+
+.navbar {
+    display: flex;
+    margin: 1em;
+
+    &-item {
+        color: $text;
+        font-size: $font-md;
+        border-top: solid 2px $background;
+        border-radius: 2px;
+
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: $hover;
+            border-top: solid 2px $hover;
+        }
+    }
+}
+
+.calc {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &__header {
+        display: flex;
+        margin-bottom: 0.5em;
+        padding: 0.5em 0;
+        justify-content: space-between;
+        color: $text;
+        
+        &-title {
+            font-size: $font-lg;
+        }
+
+        &-btn {
+            height: 2em;
+            padding: 0.5em;
+            background-color: $buttonres;
+            box-shadow: 0 3px 0 $buttonresborder;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            color: $text;
+            cursor: pointer;
+
+            transition: all 0.1s ease-in-out;
+            &:hover {
+                background-color: $hover;
+                box-shadow: 0 3px 0 $hoverborder;
+                color: $text;
+            }
+        }
+    }
+
+    &__screen {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em;
+        margin-bottom: 1em;
+        text-align: right;
+        background-color: $content;
+        color: $text;
+        border-radius: 10px;
+
+        &-prev {
+            margin: 0.5em 0;
+            opacity: 0.75;
+            font-size: $font-md;
+        }
+    
+        &-current {
+            margin-bottom: 0.5em;
+            font-size: $font-vlg;
+        }
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1em;
+        background-color: $content;
+        border-radius: 10px;
+
+
+        .button {
+            height: 3em;
+            margin: 0.5em 0.5em;
+            background-color: $buttonstd;
+            border: none;
+            box-shadow: 0 3px 0 $buttonstdborder;
+            border-radius: 10px;
+            font-size: $font-md;
+            font-weight: 800;
+            color: $content;
+            cursor: pointer;
+
+            &.option {
+                background-color: $buttonopt;
+                box-shadow: 0 3px 0 $buttonoptborder;
+                color: $text;
+            }
+
+            &.result {
+                background-color: $buttonres;
+                box-shadow: 0 3px 0 $buttonresborder;
+                color: $text;
+            }
+
+            &.spantwo {
+                grid-column: span 2;
+            }
+
+            transition: all 0.1s ease-in-out;
+            &:hover {
+                background-color: $hover;
+                box-shadow: 0 3px 0 $hoverborder;
+                color: $text;
+            }
+        }
+    }
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    &-item {
+        margin-bottom: 0.5em;
+        color: $hover;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .calc {
+        width: auto;
+        margin: 0.5em;
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 451px) {
+    .calc {
+        max-width: 500px;
+        margin: 0.5em;
+        padding: 1em;
+    }
+}

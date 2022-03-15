@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>calc</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="https://github.com/wmaKRET" target="_blank" class="navbar-item">GitHub</a>
+        </nav>
+    </header>
+    <main class="calc">
+        <div class="calc__header">
+            <span class="calc__header-title">CALC</span>
+            <button class="calc__header-btn" data-theme>THEME</button>
+        </div>
+        <div class="calc__screen">
+            <span class="calc__screen-prev" data-previous-operand>123</span>
+            <span class="calc__screen-current" data-current-operand>456</span>
+        </div>
+        <div class="calc__buttons">
+            <button class="button" data-number>7</button>
+            <button class="button" data-number>8</button>
+            <button class="button" data-number>9</button>
+            <button class="button option" data-delete>DEL</button>
+            <button class="button" data-number>4</button>
+            <button class="button" data-number>5</button>
+            <button class="button" data-number>6</button>
+            <button class="button" data-operation>+</button>
+            <button class="button" data-number>1</button>
+            <button class="button" data-number>2</button>
+            <button class="button" data-number>3</button>
+            <button class="button" data-operation>-</button>
+            <button class="button" data-number>.</button>
+            <button class="button" data-number>0</button>
+            <button class="button" data-operation>/</button>
+            <button class="button" data-operation>X</button>
+            <button class="button option spantwo" data-delete-all>RESET</button>
+            <button class="button result spantwo" data-equals>=</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer-item">wmaKRET</p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
