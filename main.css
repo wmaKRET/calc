@@ -86,6 +86,7 @@ a {
 }
 
 .calc__screen {
+  height: 6em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
